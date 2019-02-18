@@ -4,6 +4,9 @@
   "description": "A simple node-postgresql app",
   "main": "index.js",
   "scripts": {
+    "build": "babel --out-dir dist src",
+    "start": "npm run build && node dist/app.js",
+    "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,27 @@
   "bugs": {
     "url": "https://github.com/kennymorgan1/booklist/issues"
   },
-  "homepage": "https://github.com/kennymorgan1/booklist#readme"
+  "homepage": "https://github.com/kennymorgan1/booklist#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-watch": "^4.0.2",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "dotenv": "^6.2.0",
+    "nodemon": "^1.18.10"
+  }
 }
